@@ -51,7 +51,7 @@ client.on('ready', () => {
   const playingGame = games[~~(Math.random() * games.length)]
   console.log(`Changing playing game to {$playingGame} now`)
   client.user.setGame(playingGame) 
-  }, 18000)
+  }, 180000)
 });
 
 client.elevation = message => {
