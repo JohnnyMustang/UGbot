@@ -45,7 +45,14 @@ client.reload = command => {
   });
 };
 
-client.on('ready', () => { client.user.setGame('Ghost of Mafia Past') })
+client.on('ready', () => { 
+  const games = ['Ghosts of Mafia Past', 'Witch Hunt', 'PokeWolf Alpha', 'Naruto Chuunin Exams Qualifier', 'Metereological Mafia'];
+  setInterval(() => {
+  const playingGame = games[~~(Math.random() * games.length)]
+  console.log(`Changing playing game to {$playingGame} now`)
+  client.user.setGame(playingGame) 
+  }, 18000)
+});
 
 client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
@@ -73,4 +80,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.TOKEN);
+client.login(settings.token);
