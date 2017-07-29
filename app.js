@@ -45,7 +45,7 @@ client.reload = command => {
   });
 };
 
-client.on('ready', () => { bot.user.setGame('Ghost of Mafia Past') })
+client.on('ready', () => { client.user.setGame('Ghost of Mafia Past') })
 
 client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
