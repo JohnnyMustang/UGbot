@@ -1,12 +1,12 @@
 {
-  "name": "Tutorial-Bot",
-  "version": "1.2.5",
-  "description": "An Idiot's Guide tutorial Bot",
+  "name": "Godfather",
+  "version": "1.0.0",
+  "description": "A bot for The Underground Server",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "An Idiot's Guide",
+  "author": "Johnny",
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
