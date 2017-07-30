@@ -75,7 +75,7 @@ let autoResponse = {
 
 client.on("message", message => {
 	if (message.author.bot) return;
-	let msg = message.content.toLowerCase();
+	let msg = message.content.toLowerCase;
 	if (autoResponse[msg]) {
 		message.channel.send(autoResponse[message.content]);
 	}
