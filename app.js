@@ -74,6 +74,7 @@ client.elevation = message => {
   }
 
 client.on("message", message => {
+  if (message.author.bot) return;
   if(autoResponse[message.content]) {
     message.channel.send(autoResponse[message.content]);
   }
