@@ -67,17 +67,25 @@ client.elevation = message => {
 };
 
   let autoResponse = {
-  "hej": "hej",
-  "ayy": "lmao",
-  "ayyy": "lmao",
-  "ayyyy": "lmao"
+  "HEJ": "hej",
+  "AYY": "lmao",
+  "AYYY": "lmao",
+  "AYYYY": "lmao",
+  "THAT'S HOT" "eso es caliente"
   }
 
+  function getResponse(message) {
+  // only strings implement toUpperCase method
+  if (typeof message !== 'string') return undefined;
+  return autoResponse[message.content.toUpperCase()];
+}
+
 client.on("message", message => {
-  if (message.author.bot) return;
-  if(autoResponse[message.content]) {
-    message.channel.send(autoResponse[message.content]);
-  }
+   if (message.author.bot) return;
+   let response = getResponse(message);
+      if (response) {
+        message.channel.send(message, response); 
+      }
 });
 
 
