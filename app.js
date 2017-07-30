@@ -66,6 +66,20 @@ client.elevation = message => {
   return permlvl;
 };
 
+client.on('message', message => {
+    let autoResponse = {
+  "hej": "hej",
+  "ayy": "lmao",
+  "ayyy": "lmao",
+  "ayyyy": "lmao"
+}
+  
+  if(autoResponse[message.content]) {
+    message.channel.send(autoResponse[message.content]);
+    console.log('hola')
+  };
+});
+
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 // client.on('debug', e => {
