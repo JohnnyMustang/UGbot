@@ -1,7 +1,8 @@
 exports.run = (client, message, args) => {
-    if (!args) {
-    return message.reply('just stabbed themselves! :dagger::scream: Someone call the police!');
-    message.reply(`just stabbed {$args} :dagger::scream:`);
+    let stabee = args.slice(1).join(' ');
+    let user = message.mentions.users.first();
+    if (stabee.length < 1) return message.reply('just stabbed themselves! :dagger::scream: Someone call the police!'); {
+    message.reply(`just stabbed {$user} :dagger::scream:`);
 }};
 
 exports.conf = {
