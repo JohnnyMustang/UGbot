@@ -70,7 +70,9 @@ let autoResponse = {
 	"hej": "hej",
 	"ayy": "lmao",
 	"ayyy": "lmao",
-	"ayyyy": "lmao"
+	"ayyyy": "lmao",
+	"that's hot": "eso caliente",
+	"lenny": "( ͡° ͜ʖ ͡°)"
 };
 
 client.on("message", message => {
