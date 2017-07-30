@@ -66,18 +66,17 @@ client.elevation = message => {
   return permlvl;
 };
 
-client.on('message', message => {
-    let autoResponse = {
+  let autoResponse = {
   "hej": "hej",
   "ayy": "lmao",
   "ayyy": "lmao",
   "ayyyy": "lmao"
-}
-  
+  }
+
+client.on("message", message => {
   if(autoResponse[message.content]) {
     message.channel.send(autoResponse[message.content]);
-    console.log('hola')
-  };
+  }
 });
 
 
