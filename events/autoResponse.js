@@ -1,4 +1,4 @@
-exports.run = (client, message, guild) => {
+exports.run = (client, message) => {
 	let autoResponse = {
   "hej": "hej",
   "ayy": "lmao",
