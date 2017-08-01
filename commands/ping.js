@@ -1,8 +1,10 @@
 exports.run = (client, message) => {
+  
   message.channel.send('Ping?')
     .then(msg => {
       msg.edit(`Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)`);
     });
+    
 };
 
 exports.conf = {

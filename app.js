@@ -49,9 +49,11 @@ client.on("ready", () => {
 	const games = ["Ghosts of Mafia Past", "Witch Hunt", "PokeWolf Alpha", "Naruto Chuunin Exams Qualifier", "Metereological Mafia"];
 	setInterval(() => {
 		const playingGame = games[~~(Math.random() * games.length)];
-		console.log("Changing playing game to {$playingGame} now");
+		console.log(`Changing playing game to ${playingGame} now`);
 		client.user.setGame(playingGame);
-	}, 180000);
+	}, 180000); client.channels.get("339257481740156928").fetchMessages({limit: 30})
+ .then(messages => console.log(`Received ${messages.size} messages`))
+ .catch(console.error);
 });
 
 client.elevation = message => {
@@ -75,7 +77,10 @@ let autoResponse = {
 	"lenny": "( ͡° ͜ʖ ͡°)"
 };
 
-client.on("message", message => {
+client.on("message", message=> {
+	if (message.content === "lala") {
+		console.log(guild.members.find(nickname, 'asd'));
+	}
 	if (message.author.bot) return;
 	let msg = message.content.toLowerCase();
 	if (autoResponse[msg]) {
