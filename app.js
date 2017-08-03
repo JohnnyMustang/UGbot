@@ -51,9 +51,12 @@ client.on("ready", () => {
 		const playingGame = games[~~(Math.random() * games.length)];
 		console.log(`Changing playing game to ${playingGame} now`);
 		client.user.setGame(playingGame);
-	}, 180000); client.channels.get("339257481740156928").fetchMessages({limit: 30})
- .then(messages => console.log(`Received ${messages.size} messages`))
- .catch(console.error);
+	}, 180000);
+	client.channels.get("339257481740156928").fetchMessages({
+			limit: 30
+		})
+		.then(messages => console.log(`Received ${messages.size} messages`))
+		.catch(console.error);
 });
 
 client.elevation = message => {
@@ -77,7 +80,7 @@ let autoResponse = {
 	"lenny": "( ͡° ͜ʖ ͡°)"
 };
 
-client.on("message", message=> {
+client.on("message", message => {
 	if (message.content === "lala") {
 		console.log(guild.members.find(nickname, 'asd'));
 	}
