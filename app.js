@@ -76,7 +76,7 @@ let autoResponse = {
 	"ayy": "lmao",
 	"ayyy": "lmao",
 	"ayyyy": "lmao",
-	"that's hot": "eso caliente",
+	"that's hot": "eso es caliente",
 	"lenny": "( ͡° ͜ʖ ͡°)"
 };
 
