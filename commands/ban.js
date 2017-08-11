@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+/* const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -31,4 +31,4 @@ exports.help = {
   name: 'ban',
   description: 'Bans the mentioned user.',
   usage: 'ban [mention] [reason]'
-};
+}; */
