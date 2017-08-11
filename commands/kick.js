@@ -13,8 +13,11 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
-    .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
-  return client.channels.get(modlog.id).send({embed});
+    .addField('Action:', 'kick')
+    .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
+    .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
+    .addField('Reason', reason);
+  return client.channels.get(modlog.id).sendEmbed(embed);
 };
 
 exports.conf = {

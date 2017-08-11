@@ -46,12 +46,12 @@ client.reload = command => {
 };
 
 client.on("ready", () => {
-	const games = ["Ghosts of Mafia Past", "Witch Hunt", "PokeWolf Alpha", "Naruto Chuunin Exams Qualifier", "Metereological Mafia"];
+	const games = ["Not a Game", "The Joker Game Returns", "The Coven", "Nintendo: Choose Your Own Character 2!", "PokéDonalds"];
 	setInterval(() => {
 		const playingGame = games[~~(Math.random() * games.length)];
 		console.log(`Changing playing game to ${playingGame} now`);
 		client.user.setGame(playingGame);
-	}, 180000);
+	}, 1800000);
 	client.channels.get("339257481740156928").fetchMessages({
 			limit: 30
 		})
