@@ -77,7 +77,8 @@ let autoResponse = {
 	"ayyyy": "lmao",
 	"that's hot": "eso es caliente",
 	"lenny": "( ͡° ͜ʖ ͡°)",
-	"eso es caliente": "that's hot"
+	"eso es caliente": "that's hot",
+	"drewbie": "!kick drewbie"
 };
 
 client.on("message", message => {
